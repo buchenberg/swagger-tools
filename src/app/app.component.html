@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <md-toolbar color="primary">
+    <span>{{title}}</span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Option 1</button>
+    <button md-menu-item>Option 2</button>
+  </md-menu>
+  <md-card>
+    <button md-button>Allz</button>
+    <button md-raised-button>Of</button>
+    <button md-raised-button color="primary">The</button>
+    <button md-raised-button color="accent">Buttons</button>
+  </md-card>
+  <md-card>
+    <md-card-title>Ace Editor</md-card-title>
+    <md-card-content><ace>loading...</ace></md-card-content>
+    
+  </md-card>
+</div>
