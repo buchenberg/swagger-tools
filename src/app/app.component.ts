@@ -1,4 +1,5 @@
 import {Component, Optional} from '@angular/core';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import {Component, Optional} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Swagger Tools';
+  title = 'Harpi';
+  strings_loading = '...loading';
 }

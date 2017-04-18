@@ -15,10 +15,6 @@ import { ResultComponent } from './result/result.component';
 import { AceEditorComponent } from './ace-editor/ace-editor.component';
 import { HomeComponent } from './home/home.component';
 
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'ace-editor', component: AceEditorComponent }
-];
 
 @NgModule({
   declarations: [
@@ -33,7 +29,6 @@ const appRoutes: Routes = [
     HttpModule,
     BrowserAnimationsModule,
     AceEditorModule,
-    RouterModule.forRoot(appRoutes),
     MaterialModule.forRoot()
   ],
   providers: [],
