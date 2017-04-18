@@ -6,25 +6,37 @@ import { HttpModule } from '@angular/http';
 import {MdButtonModule, MdCheckboxModule, MdSidenavModule, MaterialModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AceEditorModule, AceEditorDirective } from 'ng2-ace-editor';
+import { RouterModule, Routes } from '@angular/router';
+
 
 
 import { AppComponent } from './app.component';
-import { AceComponent } from './ace/ace.component';
+import { ResultComponent } from './result/result.component';
+import { AceEditorComponent } from './ace-editor/ace-editor.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'ace-editor', component: AceEditorComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    AceComponent
+    ResultComponent,
+    AceEditorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterialModule.forRoot(),
-    AceEditorModule
+    AceEditorModule,
+    RouterModule.forRoot(appRoutes),
+    MaterialModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent, AceComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
